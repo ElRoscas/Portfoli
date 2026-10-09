@@ -86,11 +86,12 @@
 
     <a class="game-logo" href="index.html" data-transition="home"><b>E</b> ElRocas <small>/ GAME SELECT</small></a>
 
-    <nav><a href="index.html" data-transition="home">01 / inicio</a><a class="active" href="pages/games.html">02 / videojuegos</a><a href="pages/web.html" data-transition="web">03 / web</a><a href="#" data-contact-trigger>04 / contacto</a><a href="#" data-skills-trigger>05 / Skills</a></nav>
+    <nav id="games-navigation"><a href="index.html" data-transition="home">01 / inicio</a><a class="active" href="pages/games.html">02 / videojuegos</a><a href="pages/web.html" data-transition="web">03 / web</a><a href="#" data-contact-trigger>04 / contacto</a><a href="#" data-skills-trigger>05 / Skills</a></nav>
 
-    <button class="language-toggle" type="button" data-language-toggle>EN</button>
-
-    <button class="game-menu" type="button" aria-label="Abrir menú" aria-expanded="false"></button>
+    <div class="header-actions">
+      <button class="language-toggle" type="button" data-language-toggle>EN</button>
+      <button class="game-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="games-navigation"><span></span><span></span><span></span></button>
+    </div>
 
   </header>
 
@@ -179,7 +180,4 @@
 </body>
 
 </html>
-
-
-
 
