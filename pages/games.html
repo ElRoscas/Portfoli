@@ -1,0 +1,185 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <base href="../">
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Video games and interactive experiences by Nebula 09.">
+
+  <title>ElRocas // Game Select</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/games.css">
+
+  <link rel="stylesheet" href="styles/contact.css">
+
+  <link rel="stylesheet" href="styles/skills.css">
+
+  <link rel="stylesheet" href="styles/hover.css">
+
+  <link rel="stylesheet" href="styles/transition.css">
+
+  <script src="scripts/music.js" defer></script>
+
+  <script src="scripts/sound.js" defer></script>
+
+  <script src="scripts/contact.js" defer></script>
+
+  <script src="scripts/skills.js" defer></script>
+
+  <script src="scripts/i18n.js" defer></script>
+
+  <script src="scripts/spa.js" defer></script>
+
+  <script src="scripts/games.js" defer></script>
+
+</head>
+
+<body class="games-page">
+
+  <div class="page-transition" data-transition="games" aria-hidden="true"><span data-code="02 / PLAY" data-label="GAME SELECT">LOADING GAME FILE</span></div>
+
+  <audio id="site-music" preload="none" data-src="assets/audio/portfolio-theme.mp3" data-playlist="assets/audio/portfolio-theme.mp3,assets/audio/track-two.mp3,assets/audio/track-three.mp3"></audio>
+
+  <div class="music-control" aria-label="Controles de música">
+
+    <label for="music-volume">VOL <output id="music-volume-value" for="music-volume">42%</output></label>
+
+    <input id="music-volume" type="range" min="0" max="100" value="42" step="1" aria-label="Volumen de la música">
+
+    <button class="music-toggle" type="button" aria-pressed="false"> MUSIC: OFF</button>
+
+  </div>
+
+  <div class="sound-control" aria-label="Controles de sonido de interfaz">
+
+    <label for="sound-volume">SFX</label>
+
+    <input id="sound-volume" type="range" min="0" max="100" value="34" step="1" aria-label="Volumen de los sonidos de interfaz">
+
+    <button id="sound-toggle" type="button" aria-pressed="false">SFX ON</button>
+
+  </div>
+
+  <div class="mode-selector" aria-label="Cambiar sección">
+
+    <a class="mode-arrow" href="pages/web.html" data-transition="web" aria-label="Ir a web">&#x2039;</a>
+
+    <div><span>GUILLEM / SELECT</span><strong>VIDEO GAMES</strong></div>
+
+    <a class="mode-arrow" href="pages/web.html" data-transition="web" aria-label="Ir a web">&#x203A;</a>
+
+  </div>
+
+  <header class="games-header">
+
+    <a class="game-logo" href="index.html" data-transition="home"><b>E</b> ElRocas <small>/ GAME SELECT</small></a>
+
+    <nav><a href="index.html" data-transition="home">01 / inicio</a><a class="active" href="pages/games.html">02 / videojuegos</a><a href="pages/web.html" data-transition="web">03 / web</a><a href="#" data-contact-trigger>04 / contacto</a><a href="#" data-skills-trigger>05 / Skills</a></nav>
+
+    <button class="language-toggle" type="button" data-language-toggle>EN</button>
+
+    <button class="game-menu" type="button" aria-label="Abrir menú" aria-expanded="false"></button>
+
+  </header>
+
+  <main>
+
+    <section class="game-intro">
+
+      <div class="side-label">VILAFRANCA ARCHIVE <b>03 / 05</b></div>
+
+      <div class="game-copy"><p class="eyebrow">[ GAME ARCHIVE / SELECTOR ]</p><h1 data-i18n-html="game-title">Game<br><em>select.</em></h1><p>Elige un mundo. Cada juego tiene su propio color, sistema y nivel de intensidad.</p></div>
+
+      <div class="carousel-controls" aria-label="Controles de proyectos">
+
+        <button class="arrow prev" type="button" aria-label="Proyecto anterior"><span aria-hidden="true">&#x2039;</span></button>
+
+        <span class="selector-count"><b id="slide-current">01</b> / <i id="slide-total">03</i></span>
+
+        <button class="arrow next" type="button" aria-label="Siguiente proyecto"><span aria-hidden="true">&#x203A;</span></button>
+
+      </div>
+
+      <div class="game-carousel" tabindex="0">
+
+        <article class="game-slide is-current game-armazone" data-index="01" data-color="purple">
+
+          <div class="slide-art art-fall">
+
+            <!-- Sustituye el src por la ruta de tu imagen de Armazone, por ejemplo: assets/games/armazone-selector.png -->
+
+            <img class="selector-art-image" src="assets/games/frame-character.svg" alt="Diseño de Armazone">
+
+            <i></i><div class="art-character art-character-purple"></div>
+
+          </div>
+
+          <div class="slide-info"><p class="slide-type">01 / MAIN PROJECT</p><h2>Arma<br>zone</h2><div class="stat-panel"><strong>ARMAZONE</strong><span>THE PURPLE WORLD</span><b>LV 09</b><small>POWER / 95 &nbsp;  &nbsp; RANK / S</small></div><p>El proyecto principal: un mundo morado de acción, exploración y sistemas visuales con carácter.</p><a class="game-cta" href="pages/games/armazone.html" target="_blank" rel="noopener">Ver juego </a></div>
+
+        </article>
+
+        <article class="game-slide game-pepe" data-index="02" data-color="yellow">
+
+          <div class="slide-art art-rift">
+
+            <!-- Sustituye el src por la ruta de tu imagen de Pepe Souls, por ejemplo: assets/games/pepe-souls-selector.png -->
+
+            <img class="selector-art-image" src="assets/games/frame-character.svg" alt="Diseño de Pepe Souls">
+
+            <i></i><div class="art-character art-character-yellow"></div>
+
+          </div>
+
+          <div class="slide-info"><p class="slide-type">02 / SECONDARY PROJECT</p><h2>Pepe<br>souls</h2><div class="stat-panel"><strong>PEPE SOULS</strong><span>THE YELLOW RUN</span><b>LV 06</b><small>POWER / 61 &nbsp;  &nbsp; RANK / A</small></div><p>Una aventura amarilla, más pequeña y directa, donde cada combate tiene una historia detrás.</p><a class="game-cta" href="pages/games/pepe-souls.html" target="_blank" rel="noopener">Ver juego </a></div>
+
+        </article>
+
+        <article class="game-slide game-straghess" data-index="03" data-color="dark-red">
+
+          <div class="slide-art art-echo">
+
+            <!-- Sustituye el src por la ruta de tu imagen de Straghess, por ejemplo: assets/games/straghess-selector.png -->
+
+            <img class="selector-art-image" src="assets/games/frame-character.svg" alt="Diseño de Straghess">
+
+            <i></i><div class="art-character art-character-red"></div>
+
+          </div>
+
+          <div class="slide-info"><p class="slide-type">03 / DARK PROJECT</p><h2>Strag<br>hess</h2><div class="stat-panel"><strong>STRAGHESS</strong><span>THE DARK SIGNAL</span><b>LV 08</b><small>POWER / 82 &nbsp;  &nbsp; RANK / A+</small></div><p>Un proyecto rojo oscuro, extraño y atmosférico, construido alrededor de la tensión.</p><a class="game-cta" href="pages/games/straghess.html" target="_blank" rel="noopener">Ver juego </a></div>
+
+        </article>
+
+      </div>
+
+      <div class="story-track" aria-label="Navegación de proyectos"><div class="story-line"><span></span></div><div class="story-dots"><button class="is-current" data-go="0" aria-label="Ir al proyecto 1"></button><button data-go="1" aria-label="Ir al proyecto 2"></button><button data-go="2" aria-label="Ir al proyecto 3"></button></div><small>USE &#x2190; &#x2192; / SWIPE</small></div>
+
+    </section>
+
+  </main>
+
+  <footer class="game-footer"><span>© 2026 SANS / DERROCK</span><span>SELECT YOUR NEXT STORY</span></footer>
+
+  <div id="contact-root"></div>
+
+  <div id="skills-root"></div>
+
+</body>
+
+</html>
+
+
+
+

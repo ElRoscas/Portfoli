@@ -1,0 +1,37 @@
+#skills-root{position:relative;z-index:200}
+.skills-backdrop{position:fixed;z-index:0;inset:0;background:rgba(5,4,10,.72);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.skills-drawer{position:fixed;z-index:1;right:10px;bottom:10px;left:10px;max-height:min(690px,calc(100vh - 20px));padding:26px 34px 18px;overflow-y:auto;color:#f7f7f2;background:linear-gradient(145deg,#111117 0 72%,#24104d 72% 100%);border:3px solid #7928d8;box-shadow:0 -16px 0 rgba(20,223,242,.12);transform:translateY(110%) rotate(1deg);transition:transform .55s cubic-bezier(.7,0,.2,1)}
+.skills-drawer.is-open{transform:translateY(0) rotate(1deg)}
+#skills-root.is-open .skills-backdrop{opacity:1;visibility:visible}
+.skills-drawer__top{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:2px solid #5e6169}
+.skills-kicker{color:#14dff2;font:700 .54rem "Space Mono",monospace;letter-spacing:.12em}
+.skills-close{width:42px;height:36px;color:#08090d;background:#14dff2;border:2px solid #f7f7f2;font:900 2rem/.8 "Barlow Condensed",sans-serif;cursor:pointer;transform:skewX(-10deg)}
+.skills-heading{display:flex;align-items:end;gap:25px;padding:20px 0 10px}
+.skills-heading>span{color:#a7abb4;font-size:.5rem;letter-spacing:.1em}
+.skills-heading h2{margin:0;color:#f7f7f2;font:900 clamp(3.5rem,8vw,6rem)/.7 "Barlow Condensed",sans-serif;text-transform:uppercase;transform:skewX(-8deg);text-shadow:4px 4px 0 #7928d8}
+.skills-heading p{max-width:260px;margin:0 0 3px auto;color:#a7abb4;font-size:.62rem;line-height:1.6}
+.skills-orbit{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px 22px;align-items:end;justify-items:center;min-height:250px;padding:12px 2%}
+.skill-orb{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:120px;color:#f7f7f2;text-align:center}
+.skill-orb__ring{position:relative;display:grid;width:clamp(105px,12vw,155px);aspect-ratio:1;place-items:center;border:2px solid rgba(216,180,254,.24);border-radius:50%;background:conic-gradient(var(--skill-color) calc(var(--skill-level)*10%),rgba(168,85,247,.08) 0);box-shadow:inset 0 0 0 10px rgba(10,7,24,.35),0 0 0 5px rgba(168,85,247,.08)}
+.skill-orb__ring:before{position:absolute;inset:11px;content:"";border:1px solid rgba(255,255,255,.18);border-radius:50%}
+.skill-orb__ring:after{position:absolute;inset:3px;content:"";border-radius:50%;background:repeating-conic-gradient(rgba(255,255,255,.2) 0 1deg,transparent 1deg 36deg);-webkit-mask:radial-gradient(transparent 0 72%,#000 73%);mask:radial-gradient(transparent 0 72%,#000 73%);opacity:.35}
+.skill-orb__ring span{position:relative;z-index:1;font:900 clamp(2.8rem,5vw,4.5rem)/1 "Barlow Condensed",sans-serif}
+.skill-orb strong{font:900 1.25rem/.9 "Barlow Condensed",sans-serif;text-transform:uppercase;transform:skewX(-8deg)}
+.skill-orb small{color:#a7abb4;font-size:.48rem;letter-spacing:.1em}
+.skills-drawer__footer{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:2px solid #5e6169;color:#a7abb4;font:700 .5rem "Space Mono",monospace;letter-spacing:.08em}
+body.skills-is-open{overflow:hidden}
+.detail-skills{margin-left:auto;padding:9px 12px;color:var(--ink,#070914);background:var(--cyan,#14e2ed);border:2px solid var(--ink,#070914);font:900 .62rem "Barlow Condensed",sans-serif;letter-spacing:.08em;transform:skewX(-8deg)}
+.detail-skills:hover{background:var(--red,#7928d8);color:var(--white,#f7f7f2)}
+@media(max-width:760px){
+  .skills-drawer{top:10px;right:10px;bottom:auto;left:10px;width:calc(100% - 20px);max-height:calc(100vh - 20px);padding:18px 15px 14px;transform:translateY(115%) rotate(1deg)}
+  .skills-drawer.is-open{transform:translateY(0) rotate(1deg)}
+  .skills-heading{display:block;padding:18px 0 8px}
+  .skills-heading h2{margin-top:12px;font-size:clamp(3.7rem,18vw,5.5rem)}
+  .skills-heading p{max-width:290px;margin:14px 0 0;font-size:.58rem}
+  .skills-orbit{grid-template-columns:repeat(2,minmax(110px,1fr));gap:18px 8px;min-height:0;padding:12px 0}
+  .skill-orb{min-width:0}
+  .skill-orb__ring{width:min(38vw,145px)}
+  .skill-orb strong{font-size:1.05rem}
+  .skills-drawer__footer{margin-top:16px}
+  .detail-header .detail-skills{padding:7px 8px;font-size:.48rem}
+}

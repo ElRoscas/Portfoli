@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ElRocas portfolio: web design and video game development.">
+  <title>ElRocas // Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/skills.css">
+  <link rel="stylesheet" href="styles/hover.css">
+  <link rel="stylesheet" href="styles/transition.css">
+  <script src="scripts/music.js" defer></script>
+  <script src="scripts/sound.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
+  <script src="scripts/i18n.js" defer></script>
+  <script src="scripts/skills.js" defer></script>
+  <script src="scripts/spa.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <div class="page-transition" data-transition="home" aria-hidden="true"><span data-code="01 / HOME" data-label="DIGITAL PORTFOLIO">LOADING NEXT FILE</span></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <audio id="site-music" preload="none" data-src="assets/audio/portfolio-theme.mp3" data-playlist="assets/audio/portfolio-theme.mp3,assets/audio/track-two.mp3,assets/audio/track-three.mp3"></audio>
+  <div class="music-control" aria-label="Controles de música">
+    <label for="music-volume">VOL <output id="music-volume-value" for="music-volume">42%</output></label>
+    <input id="music-volume" type="range" min="0" max="100" value="42" step="1" aria-label="Volumen de la música">
+    <button class="music-toggle" type="button" aria-pressed="false">♫ MUSIC: OFF</button>
+  </div>
+  <div class="sound-control" aria-label="Controles de sonido de interfaz">
+    <label for="sound-volume">SFX</label>
+    <input id="sound-volume" type="range" min="0" max="100" value="34" step="1" aria-label="Volumen de los sonidos de interfaz">
+    <button id="sound-toggle" type="button" aria-pressed="false">SFX ON</button>
+  </div>
+  <header class="topbar container">
+    <a class="brand" href="#home" aria-label="Volver al inicio"><span class="brand-mark">E</span> ElRocas</a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    <button class="language-toggle" type="button" data-language-toggle>EN</button>
+    <nav id="main-nav" aria-label="Navegación principal">
+      <a class="active" href="#home">01 / inicio</a>
+      <a href="pages/games.html" data-transition="games">02 / videojuegos</a>
+      <a href="pages/web.html" data-transition="web">03 / web</a>
+      <a href="#" data-contact-trigger>04 / contacto</a>
+      <a href="#" data-skills-trigger data-i18n="skills-button">05 / Skills</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">[ ESTUDIO DIGITAL // ONLINE ]</p>
+        <h1 data-i18n-html="hero-title">Make<br><span>impact.</span></h1>
+        <p class="hero-copy">Diseñamos experiencias digitales con actitud. Sitios web que convierten. Videojuegos que se quedan contigo. Todo empieza con una buena idea.</p>
+        <div class="hero-actions">
+          <a class="button" href="pages/games.html" data-transition="games">Ver videojuegos <span>↗</span></a>
+          <a class="button secondary" href="#" data-contact-trigger>Hablemos</a>
+        </div>
+      </div>
+      <aside class="hud-card" aria-label="Estado del estudio">
+        <!-- Sustituye el src por tu propia imagen de la tarjeta de estado. -->
+        <img class="hud-card-image" src="assets/games/frame-archive.svg" alt="Tarjeta de estado de ElRocas">
+      </aside>
+    </section>
+
+    <section class="section container" id="work">
+      <div class="section-heading">
+        <div><p class="eyebrow">[ CASE FILES / 03 ]</p><h2 data-i18n-html="work-title">Selected<br>work.</h2></div>
+        <p>Una selección de proyectos donde estrategia, diseño y tecnología se cruzan para crear algo que merece ser visto.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filtrar proyectos">
+        <button class="filter active" type="button" data-filter="all">Todos</button>
+        <button class="filter" type="button" data-filter="web">Web</button>
+        <button class="filter" type="button" data-filter="game">Videojuegos</button>
+      </div>
+      <div class="projects">
+        <article class="project large" data-number="01" data-category="game" data-title="Armazone" data-description="El proyecto principal: una aventura morada con identidad visual, interfaz de usuario y experiencia de juego.">
+          <span class="tag">01 — videojuego / proyecto principal</span><div class="project-icon"></div>
+          <h3>Arma<br>zone</h3><p>El videojuego principal, completamente morado, con un mundo grande y una identidad visual propia.</p>
+          <a class="project-link" href="pages/games.html" data-transition="games">Abrir sección ↗</a>
+        </article>
+        <article class="project" data-number="02" data-category="game" data-title="Pepe Souls" data-description="Videojuego secundario de color amarillo con combates breves y personalidad propia.">
+          <span class="tag">02 — videojuego / secundario</span><h3>Pepe<br>souls</h3><p>El juego amarillo, más pequeño, directo y desenfadado.</p>
+          <a class="project-link" href="pages/games/pepe-souls.html" target="_blank" rel="noopener">Abrir juego ↗</a>
+        </article>
+        <article class="project" data-number="03" data-category="web" data-title="Smash Ground" data-description="La página web morada del estudio y su identidad digital.">
+          <span class="tag">03 — web / identidad</span><h3>Smash<br>Ground</h3><p>La presencia web morada del estudio.</p>
+          <a class="project-link" href="pages/web.html" data-transition="web">Abrir sección ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="services">
+      <div class="section-heading"><div><p class="eyebrow">[ EQUIPMENT / 03 ]</p><h2 data-i18n-html="loadout-title">Loadout.</h2></div><p>Las herramientas que usamos para convertir una visión en una experiencia memorable.</p></div>
+      <div class="services">
+        <article class="service"><span class="service-number">[ 01 ]</span><h3>Web<br>design</h3><p>Dirección de arte, UX/UI, motion y desarrollo front-end para marcas que quieren destacar.</p></article>
+        <article class="service"><span class="service-number">[ 02 ]</span><h3>Game<br>dev</h3><p>Concepto, prototipado, UI y diseño de mundos para experiencias jugables con personalidad.</p></article>
+        <article class="service"><span class="service-number">[ 03 ]</span><h3>Visual<br>systems</h3><p>Identidades visuales, sistemas de diseño y assets que hacen reconocible cada proyecto.</p></article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container"><span>© <span id="year">2026</span> ELROCAS STUDIO</span><span>NO SIGNAL / NO LIMITS</span></footer>
+  <div id="contact-root"></div>
+  <div id="skills-root"></div>
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+/*
+ * Persona-style selection plate.
+ * The control itself stays rectangular in the layout, while its selected
+ * background becomes a layered, irregular polygon.
+ */
+:root {
+  --select-face: #101114;
+  --select-text: #f7f7f1;
+  --select-deep: #102b68;
+  --select-light: #1d5cc7;
+}
+
+nav a,
+.button,
+.filter,
+.game-cta,
+.contact-notification {
+  position: relative;
+  isolation: isolate;
+  transition: color .16s ease, transform .16s ease;
+}
+
+nav a {
+  display: inline-block;
+  padding: 9px 12px;
+}
+
+nav a::before,
+nav a::after,
+.button::before,
+.button::after,
+.filter::before,
+.filter::after,
+.game-cta::before,
+.game-cta::after,
+.contact-notification::before,
+.contact-notification::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  clip-path: polygon(3% 17%, 91% 0, 100% 26%, 94% 84%, 68% 100%, 7% 88%, 0 51%);
+  transition: opacity .16s ease, transform .2s cubic-bezier(.2, 1.3, .4, 1);
+}
+
+/* Back plates: purple layers remain visible under the face. */
+nav a::before,
+.button::before,
+.filter::before,
+.game-cta::before,
+.contact-notification::before {
+  inset: -8px -11px -9px -10px;
+  background: linear-gradient(125deg, var(--select-light) 0 22%, #7b37d4 23% 65%, var(--select-deep) 66%);
+  transform: translate(8px, 8px) rotate(-2deg) skewX(-8deg);
+}
+
+/* Main selected plate: black/white depending on the component. */
+nav a::after,
+.button::after,
+.filter::after,
+.game-cta::after,
+.contact-notification::after {
+  inset: -3px -5px -4px -5px;
+  background: var(--select-face);
+  transform: translate(2px, 2px) rotate(1deg) skewX(-8deg);
+}
+
+nav a:hover,
+nav a.active,
+.button:hover,
+.filter:hover,
+.filter.active,
+.game-cta:hover,
+.contact-notification:hover,
+.contact-notification.is-selected {
+  z-index: 1;
+  color: #fff;
+  background: transparent;
+}
+
+nav a.active::before {
+  opacity: 1;
+  inset: -8px -11px -9px -10px;
+  background: linear-gradient(125deg, var(--select-light) 0 22%, #7b37d4 23% 65%, var(--select-deep) 66%);
+  transform: translate(8px, 8px) rotate(-2deg) skewX(-8deg);
+  clip-path: polygon(7% 10%, 94% 0, 100% 72%, 78% 100%, 4% 88%, 0 32%);
+}
+
+nav a.active::after {
+  opacity: 1;
+  inset: -3px -5px -4px -5px;
+  background: var(--select-face);
+  transform: translate(2px, 2px) rotate(1deg) skewX(-8deg);
+  clip-path: polygon(8% 8%, 96% 0, 100% 70%, 76% 100%, 4% 88%, 0 28%);
+}
+
+nav a:hover,
+nav a.active {
+  transform: skewX(-8deg) rotate(-1deg);
+}
+
+nav a:hover::before,
+nav a.active::before,
+.button:hover::before,
+.filter:hover::before,
+.filter.active::before,
+.game-cta:hover::before,
+.contact-notification:hover::before,
+.contact-notification.is-selected::before,
+nav a:hover::after,
+nav a.active::after,
+.button:hover::after,
+.filter:hover::after,
+.filter.active::after,
+.game-cta:hover::after,
+.contact-notification:hover::after,
+.contact-notification.is-selected::after {
+  opacity: 1;
+}
+
+nav a:hover::before,
+.button:hover::before,
+.filter:hover::before,
+.game-cta:hover::before,
+.contact-notification:hover::before {
+  transform: translate(8px, 8px) rotate(-3deg) skewX(-8deg);
+}
+
+nav a.active::before,
+.filter.active::before,
+.contact-notification.is-selected::before {
+  transform: translate(8px, 8px) rotate(-2deg) skewX(-8deg);
+}
+
+.button::after,
+.game-cta::after {
+  background: var(--select-text);
+}
+
+.button:hover,
+.game-cta:hover {
+  color: #101114;
+}
+
+.filter::after {
+  background: var(--select-face);
+}
+
+.arrow:hover,
+.social-controls button:hover {
+  color: var(--select-text);
+  background: var(--select-face);
+}
+
+@media (max-width: 760px) {
+  nav a {
+    padding: 12px 16px 12px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  .button,
+  .filter,
+  .game-cta,
+  .contact-notification,
+  nav a::before,
+  nav a::after,
+  .button::before,
+  .button::after,
+  .filter::before,
+  .filter::after,
+  .game-cta::before,
+  .game-cta::after,
+  .contact-notification::before,
+  .contact-notification::after {
+    transition: none;
+  }
+}

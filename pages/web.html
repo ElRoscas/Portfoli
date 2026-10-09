@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <base href="../">
+
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Web design and development by Smash Ground.">
+
+  <title>Smash Ground // Web Lab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/web.css"><link rel="stylesheet" href="styles/contact.css"><link rel="stylesheet" href="styles/skills.css"><link rel="stylesheet" href="styles/hover.css"><link rel="stylesheet" href="styles/transition.css"><script src="scripts/music.js" defer></script><script src="scripts/sound.js" defer></script><script src="scripts/contact.js" defer></script><script src="scripts/i18n.js" defer></script><script src="scripts/skills.js" defer></script><script src="scripts/spa.js" defer></script><script src="scripts/web.js" defer></script>
+
+</head>
+
+<body class="web-page">
+
+  <div class="page-transition" data-transition="web" aria-hidden="true"><span data-code="03 / LINK" data-label="WEB PROJECTS">OPENING WEB LAB</span></div>
+
+  <audio id="site-music" preload="none" data-src="assets/audio/portfolio-theme.mp3" data-playlist="assets/audio/portfolio-theme.mp3,assets/audio/track-two.mp3,assets/audio/track-three.mp3"></audio>
+
+  <div class="music-control" aria-label="Controles de música">
+
+    <label for="music-volume">VOL <output id="music-volume-value" for="music-volume">42%</output></label>
+
+    <input id="music-volume" type="range" min="0" max="100" value="42" step="1" aria-label="Volumen de la música">
+
+    <button class="music-toggle" type="button" aria-pressed="false"> MUSIC: OFF</button>
+
+  </div>
+
+  <div class="sound-control" aria-label="Controles de sonido de interfaz">
+
+    <label for="sound-volume">SFX</label>
+
+    <input id="sound-volume" type="range" min="0" max="100" value="34" step="1" aria-label="Volumen de los sonidos de interfaz">
+
+    <button id="sound-toggle" type="button" aria-pressed="false">SFX ON</button>
+
+  </div>
+
+  <div class="mode-selector" aria-label="Cambiar sección">
+
+    <a class="mode-arrow" href="pages/games.html" data-transition="games" aria-label="Ir a videojuegos">&#x2039;</a>
+
+    <div><span>SMASH GROUND / SELECT</span><strong>WEB PROJECTS</strong></div>
+
+    <a class="mode-arrow" href="pages/games.html" data-transition="games" aria-label="Ir a videojuegos">&#x203A;</a>
+
+  </div>
+
+  <header class="web-header">
+
+    <a class="web-logo" href="index.html" data-transition="home"><b>S</b> Smash Ground <small>/ WEB LAB</small></a>
+
+    <nav><a href="index.html" data-transition="home">01 / inicio</a><a href="pages/games.html" data-transition="games">02 / videojuegos</a><a class="active" href="pages/web.html">03 / web</a><a href="#" data-contact-trigger>04 / contacto</a><a href="#" data-skills-trigger>05 / Skills</a></nav>
+
+    <button class="language-toggle" type="button" data-language-toggle>EN</button>
+
+    <button class="web-menu" type="button" aria-label="Abrir menú" aria-expanded="false"></button>
+
+  </header>
+
+  <main class="web-main">
+
+    <div class="social-heading"><p class="eyebrow">[ SMASH GROUND / DIGITAL INTERFACE ]</p><h1 data-i18n-html="web-title">Smash<br><span>Ground.</span></h1><p class="web-lead">La página web de Smash Ground: sistemas digitales limpios, rápidos y completamente morados.</p></div>
+
+    <section class="web-grid">
+
+      <article class="web-card web-card-main"><span>01 / SMASH GROUND</span><h2>Smash<br>Ground</h2><p>La experiencia digital principal de la marca.</p><div class="browser-mock"><i></i><b></b><em></em></div><a href="mailto:hola@smashground.studio">Ver caso </a></article>
+
+      <article class="web-card web-card-cyan"><span>02 / IDENTITY</span><h2>Smash<br>system</h2><div class="orbit">S</div><a href="mailto:hola@smashground.studio">Ver caso </a></article>
+
+      <article class="web-card web-card-dark"><span>03 / CAMPAIGN</span><h2>Ground<br>zero</h2><p>Landing pages, sistemas de marca y motion para proyectos que necesitan impacto.</p><a href="mailto:hola@smashground.studio">Ver caso </a></article>
+
+    </section>
+
+    <div class="social-controls"><button type="button" aria-label="Anterior">&#x2190;</button><span>WEB / 03</span><button type="button" aria-label="Siguiente">&#x2192;</button></div>
+
+  </main>
+
+  <footer class="web-footer"><span>© 2026 SMASH GROUND</span><span>MAKE IT CLICK</span></footer>
+
+  <div id="contact-root"></div>
+
+  <div id="skills-root"></div>
+
+</body>
+
+</html>
+
+
+
+
